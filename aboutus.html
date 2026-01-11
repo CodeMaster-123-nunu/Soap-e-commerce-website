@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div>📞 Call us: +256-776-541-470</div>
+                <div>✨ Free Shipping on Orders Over UGX 50,000</div>
+            </div>
+        </div>
+        <nav>
+            <div class="container nav-container">
+                <a href="#" class="logo">🧼 CleanBrite</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="category.html">Categories</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="nav-icon" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <h1>Our Story</h1>
+        <p>Handcrafted with love, one bubble at a time 🌸</p>
+    </section>
+
+    <!-- Story Section -->
+    <section class="about-content">
+        <div class="story-section">
+            <div class="story-text">
+                <h2>From Our Kitchen to Your Home</h2>
+                <p>CleanBrite started in  2025 as a small passion project in Kampala, Uganda. Our founder, a mother of three, was frustrated with harsh chemical soaps that irritated her children's skin.</p>
+                <p>She began experimenting with natural ingredients from local markets — shea butter, coconut oil, essential oils, and Ugandan honey. What began as gifts for family and friends quickly turned into something bigger when everyone kept asking for more.</p>
+                <p>Today, CleanBrite is a proud Ugandan brand dedicated to creating gentle, effective, and beautifully scented soaps using only natural ingredients. Every bar is handmade with love, just like the first ones in our kitchen.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Handmaking soap in kitchen">
+            </div>
+        </div>
+
+        <!-- Our Values -->
+        <h2 style="text-align:center;font-family:'Dancing Script',cursive;font-size:3.5rem;color:var(--purple);margin-bottom:60px;">Our Promise to You</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🌿</div>
+                <h3>100% Natural</h3>
+                <p>No harsh chemicals, parabens, or synthetic fragrances. Only ingredients you can pronounce.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🐰</div>
+                <h3>Cruelty-Free</h3>
+                <p>We never test on animals — only willing humans who love bubbles!</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🇺🇬</div>
+                <h3>Made in Uganda</h3>
+                <p>Supporting local farmers and communities with every purchase.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">♻️</div>
+                <h3>Eco-Friendly</h3>
+                <p>Minimal packaging, biodegradable ingredients, and zero waste in production.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 style="font-family:'Dancing Script',cursive;font-size:3.5rem;color:var(--purple);margin-bottom:20px;">Meet Our Family</h2>
+            <p style="font-size:1.2rem;max-width:800px;margin:0 auto 60px;">We're a small team of passionate soap makers who believe clean should feel luxurious</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">👩🏾</div>
+                    <h3>Grace Nakato</h3>
+                    <p>Founder & Chief Soap Maker</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">👩🏽</div>
+                    <h3>Sarah Mbabazi</h3>
+                    <p>Head of Quality & Happiness</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">👨🏾</div>
+                    <h3>Isaac Kizza</h3>
+                    <p>Packaging & Shipping Wizard</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bubbles Animation Script -->
+    <script>
+        for (let i = 0; i < 10; i++) {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.style.width = bubble.style.height = `${40 + Math.random() * 70}px`;
+            bubble.style.left = `${Math.random() * 100}%`;
+            bubble.style.animationDelay = `${Math.random() * 15}s`;
+            document.querySelector('.bubbles').appendChild(bubble);
+        }
+    </script>
+    
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🧼 CleanBrite</h3>
+                    <p>Your trusted source for premium soaps and detergents. Making homes cleaner, one product at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="category.html">Categories</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📍 Kampala, Uganda</li>
+                        <li>📞 +256-123-456-789</li>
+                        <li>✉️ info@cleanbrite.com</li>
+                        <li>🕒 Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CleanBrite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="style.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanBrite - Premium Soaps & Detergents</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Bubbles Background -->
+    <div class="bubbles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div>📞 Call us: +256-776-541-470</div>
+                <div>✨ Free Shipping on Orders Over UGX 50,000</div>
+            </div>
+        </div>
+        <nav>
+            <div class="container nav-container">
+                <a href="#" class="logo">🧼 CleanBrite</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="category.html">Categories</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="nav-icon" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Clean Better, Live Better</h1>
+            <p>Your One-Stop Shop for Quality Cleaning Products</p>
+            <a href="products.html" class="btn btn-primary">Shop Now →</a>
+        </div>
+        
+<div class="auth-buttons" style="margin-top: 30px;">
+    <a href="signup.html" class="btn" style="background: var(--mint); margin-right: 15px;">
+        Sign Up
+    </a>
+    <a href="login.html" class="btn btn-outline">
+        Login
+    </a>
+</div>
+    </section>
+
+    
+
+    <!-- Products -->
+    <!-- <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="filter-bar">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProducts('all')">All Products</button>
+                    <button class="filter-btn" onclick="filterProducts('bar-soap')">Bar Soaps</button>
+                    <button class="filter-btn" onclick="filterProducts('liquid-soap')">Liquid Soaps</button>
+                    <button class="filter-btn" onclick="filterProducts('detergent')">Detergents</button>
+                    <button class="filter-btn" onclick="filterProducts('powder')">Powder</button>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section> -->
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Free Delivery</h3>
+                    <p>On orders over UGX 50,000</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>100% authentic products</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Secure Payment</h3>
+                    <p>Safe & secure transactions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Easy Returns</h3>
+                    <p>7-day return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Join Our Newsletter</h2>
+            <p>Get exclusive deals and updates delivered to your inbox</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-total" id="cartTotal" style="display: none;">
+            <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">UGX 0</span>
+            </div>
+            <div class="total-row">
+                <span>Shipping:</span>
+                <span id="shipping">Free</span>
+            </div>
+            <div class="total-row grand-total">
+                <span>Total:</span>
+                <span id="grandTotal">UGX 0</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🧼 CleanBrite</h3>
+                    <p>Your trusted source for premium soaps and detergents. Making homes cleaner, one product at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="category.html">Categories</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📍 Kampala, Uganda</li>
+                        <li>📞 +256-123-456-789</li>
+                        <li>✉️ info@cleanbrite.com</li>
+                        <li>🕒 Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CleanBrite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- WhatsApp Chat Button -->
+<a href="https://wa.me/256776541470?text=Hi%20CleanBrite!%20I'd%20like%20to%20order..." target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <script src="style.js"></script>
+</body>
+</html>

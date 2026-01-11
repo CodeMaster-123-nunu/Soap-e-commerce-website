@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checkout - CleanBrite</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div>📞 Call us: +256-776-541-470</div>
+                <div>✨ Free Shipping on Orders Over UGX 50,000</div>
+            </div>
+        </div>
+        <nav>
+            <div class="container nav-container">
+                <a href="#" class="logo">🧼 CleanBrite</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="nav-icon" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+<body>
+    <div class="container" style="text-align:center;padding:100px;">
+        <h1>Secure Checkout</h1>
+        <p>Total: UGX <span id="totalAmount">45000</span></p>
+        <button class="btn" onclick="makePayment()">Pay Now</button>
+    </div>
+
+    <script>
+        function makePayment() {
+            FlutterwaveCheckout({
+                public_key: "YOUR_PUBLIC_KEY_HERE",
+                tx_ref: "cleanbrite_" + Date.now(),
+                amount: document.getElementById('totalAmount').textContent,
+                currency: "UGX",
+                payment_options: "mobilemoneyuganda, card, banktransfer",
+                customer: {
+                    email: "customer@example.com",
+                    phone_number: "+256700000000",
+                    name: "Customer Name",
+                },
+                callback: function(data) {
+                    alert("Payment successful! Thank you 🌸");
+                    window.location.href = "thankyou.html";
+                },
+                customizations: {
+                    title: "CleanBrite Soaps",
+                    description: "Handmade with love",
+                    logo: "https://yourlogo.com/logo.png",
+                },
+            });
+        }
+    </script>
+</body>
+</html>

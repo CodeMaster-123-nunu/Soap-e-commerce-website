@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div>📞 Call us: +256-776-541-470</div>
+                <div>✨ Free Shipping on Orders Over UGX 50,000</div>
+            </div>
+        </div>
+        <nav>
+            <div class="container nav-container">
+                <a href="#" class="logo">🧼 CleanBrite</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="category.html">Categories</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="nav-icon" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterProducts('bar-soap')">
+                    <div class="category-icon">🧼</div>
+                    <h3>Bar Soaps</h3>
+                    <p>Premium bathing soaps</p>
+                </div>
+                <div class="category-card" onclick="filterProducts('liquid-soap')">
+                    <div class="category-icon">🧴</div>
+                    <h3>Liquid Soaps</h3>
+                    <p>Hand wash & body wash</p>
+                </div>
+                <div class="category-card" onclick="filterProducts('detergent')">
+                    <div class="category-icon">🧺</div>
+                    <h3>Detergents</h3>
+                    <p>Laundry & dishwashing</p>
+                </div>
+                <div class="category-card" onclick="filterProducts('powder')">
+                    <div class="category-icon">📦</div>
+                    <h3>Washing Powder</h3>
+                    <p>Strong stain removal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🧼 CleanBrite</h3>
+                    <p>Your trusted source for premium soaps and detergents. Making homes cleaner, one product at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="category.html">Categories</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📍 Kampala, Uganda</li>
+                        <li>📞 +256-123-456-789</li>
+                        <li>✉️ info@cleanbrite.com</li>
+                        <li>🕒 Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CleanBrite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="style.js"></script>
+</body>
+</html>
